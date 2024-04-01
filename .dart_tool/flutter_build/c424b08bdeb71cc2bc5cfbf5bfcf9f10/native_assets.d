@@ -1,0 +1,1 @@
+ C:\\Users\\Fermin\\Documents\\GitHub\\juegosalto\\new_super_jumper\\.dart_tool\\flutter_build\\c424b08bdeb71cc2bc5cfbf5bfcf9f10\\native_assets.yaml: 
