@@ -11,49 +11,77 @@ class TaskListScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text('Lista de Tareas'),
+        backgroundColor: Color(0xFF2c2f33),
       ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            ElevatedButton(
-              onPressed: () async {
-                // Agregar tarea
-                await _addTask('Nueva tarea');
-              },
-              child: Text('Agregar Tarea'),
+      body: Column(
+        children: [
+          Expanded(
+            child: Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: _buildTaskList(context),
             ),
-            ElevatedButton(
-              onPressed: () async {
-                // Eliminar tarea
-                await _deleteTask(1); // Poner el ID de la tarea a eliminar
-              },
-              child: Text('Eliminar Tarea'),
+          ),
+          Container(
+            color: Color(0xFF23272a),
+            padding: EdgeInsets.all(8.0),
+            child: Row(
+              children: [
+                Expanded(
+                  child: TextField(
+                    decoration: InputDecoration(
+                      hintText: 'Ingrese una nueva tarea',
+                      filled: true,
+                      fillColor: Color(0xFF99aab5),
+                      border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(8.0),
+                        borderSide: BorderSide.none,
+                      ),
+                    ),
+                  ),
+                ),
+                SizedBox(width: 8.0),
+                ElevatedButton(
+                  onPressed: () {
+                    // Lógica para agregar tarea
+                  },
+                  child: Text('Agregar'),
+                ),
+              ],
             ),
-          ],
-        ),
+          ),
+        ],
       ),
     );
   }
 
-  // Función para agregar una tarea
-  Future<void> _addTask(String taskName) async {
-    final response = await supabase.from('tasks').insert({'name': taskName});
-    if (response.error == null) {
-      // Tarea agregada exitosamente
-    } else {
-      // Manejar error
-    }
-  }
+  Widget _buildTaskList(BuildContext context) {
+    return StreamBuilder<SupabaseListData>(
+      stream: supabase.from('tasks').select(),
+      builder: (context, snapshot) {
+        if (snapshot.connectionState == ConnectionState.waiting) {
+          return Center(child: CircularProgressIndicator());
+        }
 
-  // Función para eliminar una tarea
-  Future<void> _deleteTask(int taskId) async {
-    final response =
-        await supabase.from('tasks').delete().match({'id': taskId});
-    if (response.error == null) {
-      // Tarea eliminada exitosamente
-    } else {
-      // Manejar error
-    }
+        if (snapshot.hasError) {
+          return Center(child: Text('Error: ${snapshot.error}'));
+        }
+
+        if (!snapshot.hasData || snapshot.data!.data == null) {
+          return Center(child: Text('No hay tareas'));
+        }
+
+        final tasks = snapshot.data!.data!;
+
+        return ListView.builder(
+          itemCount: tasks.length,
+          itemBuilder: (context, index) {
+            final task = tasks[index];
+            return ListTile(
+              title: Text(task['name'] ?? ''),
+            );
+          },
+        );
+      },
+    );
   }
 }

@@ -3,10 +3,8 @@ import 'package:supabase_flutter/supabase_flutter.dart';
 import 'task_list_screen.dart';
 
 void main() async {
-  WidgetsFlutterBinding
-      .ensureInitialized(); // Necesario para inicializar Supabase
+  WidgetsFlutterBinding.ensureInitialized();
 
-  // Inicializar Supabase
   await Supabase.initialize(
     url: 'https://vhbuculgldxtegtmzbrr.supabase.co',
     anonKey:
