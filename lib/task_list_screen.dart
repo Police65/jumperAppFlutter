@@ -1,10 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
 
-class TaskListScreen extends StatelessWidget {
+class TaskListScreen extends StatefulWidget {
   final SupabaseClient supabase;
 
   TaskListScreen({required this.supabase});
+
+  @override
+  _TaskListScreenState createState() => _TaskListScreenState();
+}
+
+class _TaskListScreenState extends State<TaskListScreen> {
+  final TextEditingController _taskController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -28,6 +35,7 @@ class TaskListScreen extends StatelessWidget {
               children: [
                 Expanded(
                   child: TextField(
+                    controller: _taskController,
                     decoration: InputDecoration(
                       hintText: 'Ingrese una nueva tarea',
                       filled: true,
@@ -44,7 +52,9 @@ class TaskListScreen extends StatelessWidget {
                 ),
                 SizedBox(width: 8.0),
                 ElevatedButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    _addTask(_taskController.text);
+                  },
                   child: Text('Agregar'),
                 ),
               ],
@@ -60,7 +70,7 @@ class TaskListScreen extends StatelessWidget {
 //para poder utilizar stream
   Widget _buildTaskList(BuildContext context) {
     return StreamBuilder<List<Map<String, dynamic>>>(
-      stream: supabase.from('tasks').stream(primaryKey: ['id']),
+      stream: widget.supabase.from('tasks').stream(primaryKey: ['id']),
       builder: (context, snapshot) {
         if (snapshot.connectionState == ConnectionState.waiting) {
           return Center(child: CircularProgressIndicator());
@@ -90,6 +100,7 @@ class TaskListScreen extends StatelessWidget {
   }
 
   Future<void> _addTask(String taskName) async {
-    await supabase.from('tasks').insert({'name': taskName});
+    await widget.supabase.from('tasks').insert({'name': taskName});
+    _taskController.clear();
   }
 }
