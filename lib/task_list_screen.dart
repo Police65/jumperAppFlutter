@@ -55,9 +55,14 @@ class TaskListScreen extends StatelessWidget {
     );
   }
 
+//OK parece que
+//El método execute() no se aplica directamente al PostgrestFilterBuilder
+//En su lugar, debo usarlo en el resultado de la consulta
+//después de aplicar el filtro
+//hubiera sido bueno saber eso la semana pasada
   Widget _buildTaskList(BuildContext context) {
     return StreamBuilder<List<Map<String, dynamic>>>(
-      stream: supabase.from('tasks').select(),
+      stream: supabase.from('tasks').select().execute(),
       builder: (context, snapshot) {
         if (snapshot.connectionState == ConnectionState.waiting) {
           return Center(child: CircularProgressIndicator());
