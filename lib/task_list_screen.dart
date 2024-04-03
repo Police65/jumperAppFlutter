@@ -25,7 +25,7 @@ class _TaskListScreenState extends State<TaskListScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Lista de Tareas'),
+        title: Text(''),
         backgroundColor: Color(0xFF2c2f33),
       ),
       backgroundColor: Color(0xFF2c2f33),
