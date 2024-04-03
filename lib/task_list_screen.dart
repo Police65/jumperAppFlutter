@@ -11,7 +11,15 @@ class TaskListScreen extends StatefulWidget {
 }
 
 class _TaskListScreenState extends State<TaskListScreen> {
+  Stream<List<Map<String, dynamic>>>? _tasksStream;
   final TextEditingController _taskController = TextEditingController();
+
+  @override
+  void initState() {
+    super.initState();
+    _fetchTasks();
+    _subscribeToTaskChanges();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -20,6 +28,7 @@ class _TaskListScreenState extends State<TaskListScreen> {
         title: Text('Lista de Tareas'),
         backgroundColor: Color(0xFF2c2f33),
       ),
+      backgroundColor: Color(0xFF2c2f33),
       body: Column(
         children: [
           Expanded(
@@ -65,12 +74,9 @@ class _TaskListScreenState extends State<TaskListScreen> {
     );
   }
 
-//APRENDI A PENSAR y le eche una ojeada al codigo del ANEXO III ya arregle el peo y retiro lo dicho en el anterior commit
-//No tenia que complicarme tanto cuando simplemente requeria de una primary key
-//para poder utilizar stream
   Widget _buildTaskList(BuildContext context) {
     return StreamBuilder<List<Map<String, dynamic>>>(
-      stream: widget.supabase.from('tasks').stream(primaryKey: ['id']),
+      stream: _tasksStream,
       builder: (context, snapshot) {
         if (snapshot.connectionState == ConnectionState.waiting) {
           return Center(child: CircularProgressIndicator());
@@ -90,13 +96,41 @@ class _TaskListScreenState extends State<TaskListScreen> {
           itemCount: tasks.length,
           itemBuilder: (context, index) {
             final task = tasks[index];
-            return ListTile(
-              title: Text(task['name'] ?? ''),
+            return Container(
+              margin: EdgeInsets.symmetric(vertical: 4.0),
+              decoration: BoxDecoration(
+                color: Color(0xFF99aab5),
+                borderRadius: BorderRadius.circular(8.0),
+              ),
+              padding: EdgeInsets.all(8.0),
+              child: Text(
+                task['name'] ?? '',
+                style: TextStyle(color: Colors.white),
+              ),
             );
           },
         );
       },
     );
+  }
+
+  void _fetchTasks() {
+    setState(() {
+      _tasksStream = widget.supabase.from('tasks').stream(primaryKey: ['id']);
+    });
+  }
+
+  void _subscribeToTaskChanges() {
+    widget.supabase
+        .channel('tasks')
+        .onPostgresChanges(
+            event: PostgresChangeEvent.all,
+            schema: 'public',
+            table: 'tasks',
+            callback: (payload) {
+              _fetchTasks();
+            })
+        .subscribe();
   }
 
   Future<void> _addTask(String taskName) async {
