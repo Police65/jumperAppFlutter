@@ -37,13 +37,14 @@ class TaskListScreen extends StatelessWidget {
                         borderSide: BorderSide.none,
                       ),
                     ),
+                    onSubmitted: (value) {
+                      _addTask(value);
+                    },
                   ),
                 ),
                 SizedBox(width: 8.0),
                 ElevatedButton(
-                  onPressed: () {
-                    // Lógica para agregar tarea
-                  },
+                  onPressed: () {},
                   child: Text('Agregar'),
                 ),
               ],
@@ -55,7 +56,7 @@ class TaskListScreen extends StatelessWidget {
   }
 
   Widget _buildTaskList(BuildContext context) {
-    return StreamBuilder<SupabaseListData>(
+    return StreamBuilder<List<Map<String, dynamic>>>(
       stream: supabase.from('tasks').select(),
       builder: (context, snapshot) {
         if (snapshot.connectionState == ConnectionState.waiting) {
@@ -66,11 +67,11 @@ class TaskListScreen extends StatelessWidget {
           return Center(child: Text('Error: ${snapshot.error}'));
         }
 
-        if (!snapshot.hasData || snapshot.data!.data == null) {
+        final tasks = snapshot.data ?? [];
+
+        if (tasks.isEmpty) {
           return Center(child: Text('No hay tareas'));
         }
-
-        final tasks = snapshot.data!.data!;
 
         return ListView.builder(
           itemCount: tasks.length,
@@ -83,5 +84,9 @@ class TaskListScreen extends StatelessWidget {
         );
       },
     );
+  }
+
+  Future<void> _addTask(String taskName) async {
+    await supabase.from('tasks').insert({'name': taskName});
   }
 }
