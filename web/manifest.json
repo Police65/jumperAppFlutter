@@ -1,6 +1,6 @@
 {
-    "name": "new_super_jumper",
-    "short_name": "new_super_jumper",
+    "name": "task_list",
+    "short_name": "task_list",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
