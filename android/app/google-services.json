@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "266315338400",
+    "project_id": "task2-hznetm",
+    "storage_bucket": "task2-hznetm.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:266315338400:android:9452c864d150ae4a542fc5",
+        "android_client_info": {
+          "package_name": "com.mycompany.entprojecttracker"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "266315338400-d7mbcve92d4knk1hae5sao1ruar82q11.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCal4WD0jokJ3tJiclELZIFHYI-YhXw3YY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "266315338400-d7mbcve92d4knk1hae5sao1ruar82q11.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "266315338400-o45rfd8ro59kiomfpao0kdt3i8a0vhul.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.mycompany.entprojecttracker"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
