@@ -245,7 +245,7 @@ class _MainTeamPageWidgetState extends State<MainTeamPageWidget> {
                                         Expanded(
                                           child: Text(
                                             FFLocalizations.of(context).getText(
-                                              'cqt7v5sb' /* My Team */,
+                                              'cqt7v5sb' /* Mi equipo  */,
                                             ),
                                             style: FlutterFlowTheme.of(context)
                                                 .headlineMedium
@@ -294,7 +294,7 @@ class _MainTeamPageWidgetState extends State<MainTeamPageWidget> {
                                             labelText:
                                                 FFLocalizations.of(context)
                                                     .getText(
-                                              'mop2evm0' /* Search members... */,
+                                              'mop2evm0' /* Buscar miembros */,
                                             ),
                                             labelStyle:
                                                 FlutterFlowTheme.of(context)
@@ -431,7 +431,7 @@ class _MainTeamPageWidgetState extends State<MainTeamPageWidget> {
                                             24.0, 0.0, 0.0, 0.0),
                                         child: Text(
                                           FFLocalizations.of(context).getText(
-                                            '63wkxdr4' /* Find Members */,
+                                            '63wkxdr4' /* Miembros */,
                                           ),
                                           style: FlutterFlowTheme.of(context)
                                               .bodySmall
@@ -456,7 +456,7 @@ class _MainTeamPageWidgetState extends State<MainTeamPageWidget> {
                                             12.0, 0.0, 0.0, 0.0),
                                         child: Text(
                                           FFLocalizations.of(context).getText(
-                                            'nyb9lczy' /* Created on */,
+                                            'nyb9lczy' /* Creado en  */,
                                           ),
                                           style: FlutterFlowTheme.of(context)
                                               .bodySmall

@@ -202,7 +202,7 @@ class _TeamMemberDetailsWidgetState extends State<TeamMemberDetailsWidget>
                                         0.0, 8.0, 0.0, 0.0),
                                     child: Text(
                                       FFLocalizations.of(context).getText(
-                                        'ukmpqe9t' /* Team Name */,
+                                        'ukmpqe9t' /* Nombre de equipo */,
                                       ),
                                       style: FlutterFlowTheme.of(context)
                                           .bodyMedium
@@ -310,7 +310,7 @@ class _TeamMemberDetailsWidgetState extends State<TeamMemberDetailsWidget>
                   padding: const EdgeInsetsDirectional.fromSTEB(16.0, 12.0, 0.0, 0.0),
                   child: Text(
                     FFLocalizations.of(context).getText(
-                      '9s048496' /* Tasks */,
+                      '9s048496' /* Tareas */,
                     ),
                     style: FlutterFlowTheme.of(context).labelMedium.override(
                           fontFamily:

@@ -489,7 +489,7 @@ class _TaskDetailsWidgetState extends State<TaskDetailsWidget>
                                   Expanded(
                                     child: Text(
                                       FFLocalizations.of(context).getText(
-                                        'hb364kq4' /* Due */,
+                                        'hb364kq4' /* Pendiente */,
                                       ),
                                       style: FlutterFlowTheme.of(context)
                                           .labelMedium
@@ -672,7 +672,7 @@ class _TaskDetailsWidgetState extends State<TaskDetailsWidget>
                                 children: [
                                   Text(
                                     FFLocalizations.of(context).getText(
-                                      'q4ikqgkd' /* Team Members */,
+                                      'q4ikqgkd' /* Miembros de equipo */,
                                     ),
                                     style: FlutterFlowTheme.of(context)
                                         .labelMedium
@@ -906,7 +906,7 @@ class _TaskDetailsWidgetState extends State<TaskDetailsWidget>
                           children: [
                             Text(
                               FFLocalizations.of(context).getText(
-                                'qrkfqya2' /* Notes & Activity */,
+                                'qrkfqya2' /* Notas  & Actividad */,
                               ),
                               style: FlutterFlowTheme.of(context)
                                   .labelMedium
@@ -1362,7 +1362,7 @@ class _TaskDetailsWidgetState extends State<TaskDetailsWidget>
                                     );
                                   },
                                   text: FFLocalizations.of(context).getText(
-                                    'xvvip759' /* Begin Task */,
+                                    'xvvip759' /* Iniciar tarea */,
                                   ),
                                   options: FFButtonOptions(
                                     width: 270.0,

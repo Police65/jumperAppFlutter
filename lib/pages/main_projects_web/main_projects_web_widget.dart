@@ -218,7 +218,7 @@ class _MainProjectsWebWidgetState extends State<MainProjectsWebWidget>
                               children: [
                                 Text(
                                   FFLocalizations.of(context).getText(
-                                    'qcd4z131' /* Projects */,
+                                    'qcd4z131' /* Proyectos */,
                                   ),
                                   style: FlutterFlowTheme.of(context)
                                       .headlineMedium
@@ -237,7 +237,7 @@ class _MainProjectsWebWidgetState extends State<MainProjectsWebWidget>
                                       0.0, 4.0, 0.0, 0.0),
                                   child: Text(
                                     FFLocalizations.of(context).getText(
-                                      '0e5jbrkh' /* A list of your projects below. */,
+                                      '0e5jbrkh' /* Tu lista de proyectos  */,
                                     ),
                                     style: FlutterFlowTheme.of(context)
                                         .labelSmall

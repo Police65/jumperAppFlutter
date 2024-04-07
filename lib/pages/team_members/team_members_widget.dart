@@ -72,7 +72,7 @@ class _TeamMembersWidgetState extends State<TeamMembersWidget> {
           ),
           title: Text(
             FFLocalizations.of(context).getText(
-              'cr7ls6ar' /* Add Members */,
+              'cr7ls6ar' /* Añadir miembros */,
             ),
             style: FlutterFlowTheme.of(context).headlineSmall.override(
                   fontFamily: FlutterFlowTheme.of(context).headlineSmallFamily,
@@ -123,7 +123,7 @@ class _TeamMembersWidgetState extends State<TeamMembersWidget> {
                 padding: const EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 0.0, 0.0),
                 child: Text(
                   FFLocalizations.of(context).getText(
-                    'gxfshi24' /* Members in Project */,
+                    'gxfshi24' /* Miembros en el proyecto */,
                   ),
                   style: FlutterFlowTheme.of(context).bodySmall.override(
                         fontFamily:
@@ -430,7 +430,7 @@ class _TeamMembersWidgetState extends State<TeamMembersWidget> {
                 padding: const EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 0.0, 0.0),
                 child: Text(
                   FFLocalizations.of(context).getText(
-                    '78fdfkdh' /* Add Members */,
+                    '78fdfkdh' /* Añadir miembros */,
                   ),
                   style: FlutterFlowTheme.of(context).bodySmall.override(
                         fontFamily:
@@ -733,7 +733,7 @@ class _TeamMembersWidgetState extends State<TeamMembersWidget> {
                                         },
                                         text:
                                             FFLocalizations.of(context).getText(
-                                          'rzrf0zsp' /* Assign */,
+                                          'rzrf0zsp' /* Asignar */,
                                         ),
                                         options: FFButtonOptions(
                                           width: 70.0,

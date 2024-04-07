@@ -201,7 +201,7 @@ class _LoginWidgetState extends State<LoginWidget>
                                                         FFLocalizations.of(
                                                                 context)
                                                             .getText(
-                                                      'e9pnyzm9' /* Email Address */,
+                                                      'e9pnyzm9' /* Correo electronico */,
                                                     ),
                                                     labelStyle: FlutterFlowTheme
                                                             .of(context)
@@ -344,7 +344,7 @@ class _LoginWidgetState extends State<LoginWidget>
                                                         FFLocalizations.of(
                                                                 context)
                                                             .getText(
-                                                      'z0v8ougp' /* Password */,
+                                                      'z0v8ougp' /* Contraseña */,
                                                     ),
                                                     labelStyle: FlutterFlowTheme
                                                             .of(context)
@@ -579,7 +579,7 @@ class _LoginWidgetState extends State<LoginWidget>
                                                   text: FFLocalizations.of(
                                                           context)
                                                       .getText(
-                                                    'hhgceptf' /* Forgot Password? */,
+                                                    'hhgceptf' /* ¿Olvidaste la contraseña? */,
                                                   ),
                                                   options: FFButtonOptions(
                                                     width: 170.0,
@@ -643,7 +643,7 @@ class _LoginWidgetState extends State<LoginWidget>
                                                         FFLocalizations.of(
                                                                 context)
                                                             .getText(
-                                                      'ye7jjwdc' /* Email Address */,
+                                                      'ye7jjwdc' /* Correo electronico */,
                                                     ),
                                                     labelStyle: FlutterFlowTheme
                                                             .of(context)
@@ -764,7 +764,7 @@ class _LoginWidgetState extends State<LoginWidget>
                                                         FFLocalizations.of(
                                                                 context)
                                                             .getText(
-                                                      'y4q7638d' /* Password */,
+                                                      'y4q7638d' /* Contraseña */,
                                                     ),
                                                     labelStyle: FlutterFlowTheme
                                                             .of(context)

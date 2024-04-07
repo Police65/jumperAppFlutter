@@ -198,7 +198,7 @@ class _ProjectDetailsPageWidgetState extends State<ProjectDetailsPageWidget>
                             const EdgeInsetsDirectional.fromSTEB(4.0, 0.0, 0.0, 0.0),
                         child: Text(
                           FFLocalizations.of(context).getText(
-                            'y1upl145' /* Back */,
+                            'y1upl145' /* Volver */,
                           ),
                           style: FlutterFlowTheme.of(context)
                               .displaySmall
@@ -461,7 +461,7 @@ class _ProjectDetailsPageWidgetState extends State<ProjectDetailsPageWidget>
                                     0.0, 0.0, 8.0, 0.0),
                                 child: Text(
                                   FFLocalizations.of(context).getText(
-                                    '03c7gtcz' /* View All */,
+                                    '03c7gtcz' /* Ver todo */,
                                   ),
                                   textAlign: TextAlign.end,
                                   style: FlutterFlowTheme.of(context)
@@ -725,17 +725,17 @@ class _ProjectDetailsPageWidgetState extends State<ProjectDetailsPageWidget>
                           tabs: [
                             Tab(
                               text: FFLocalizations.of(context).getText(
-                                '8i8307mb' /* In Progress */,
+                                '8i8307mb' /* Proceso */,
                               ),
                             ),
                             Tab(
                               text: FFLocalizations.of(context).getText(
-                                '1870f5uq' /* Completed */,
+                                '1870f5uq' /* Completado */,
                               ),
                             ),
                             Tab(
                               text: FFLocalizations.of(context).getText(
-                                '4cmr54lc' /* Activity */,
+                                '4cmr54lc' /* Actividad */,
                               ),
                             ),
                           ],
@@ -1129,7 +1129,7 @@ class _ProjectDetailsPageWidgetState extends State<ProjectDetailsPageWidget>
                                                             FFLocalizations.of(
                                                                     context)
                                                                 .getText(
-                                                              'mfp5v5yt' /* Due */,
+                                                              'mfp5v5yt' /* Para */,
                                                             ),
                                                             style: FlutterFlowTheme
                                                                     .of(context)
@@ -1518,7 +1518,7 @@ class _ProjectDetailsPageWidgetState extends State<ProjectDetailsPageWidget>
                                                             FFLocalizations.of(
                                                                     context)
                                                                 .getText(
-                                                              '24rs6kdw' /* Completed on */,
+                                                              '24rs6kdw' /* Completado en */,
                                                             ),
                                                             style: FlutterFlowTheme
                                                                     .of(context)
@@ -1651,7 +1651,7 @@ class _ProjectDetailsPageWidgetState extends State<ProjectDetailsPageWidget>
                                           SelectionArea(
                                               child: Text(
                                             FFLocalizations.of(context).getText(
-                                              'alg6xfua' /* Current Time */,
+                                              'alg6xfua' /* Tiempo */,
                                             ),
                                             style: FlutterFlowTheme.of(context)
                                                 .bodySmall

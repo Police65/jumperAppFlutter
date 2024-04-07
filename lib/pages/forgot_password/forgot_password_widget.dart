@@ -233,7 +233,7 @@ class _ForgotPasswordWidgetState extends State<ForgotPasswordWidget> {
                       obscureText: false,
                       decoration: InputDecoration(
                         labelText: FFLocalizations.of(context).getText(
-                          'ujc5xipx' /* Email Addresss */,
+                          'ujc5xipx' /* Correo electronico */,
                         ),
                         labelStyle:
                             FlutterFlowTheme.of(context).labelMedium.override(

@@ -74,7 +74,7 @@ class _SearchMembersWidgetState extends State<SearchMembersWidget> {
           ),
           title: Text(
             FFLocalizations.of(context).getText(
-              'i5eebch9' /* Add Members */,
+              'i5eebch9' /* Añadir miembros */,
             ),
             style: FlutterFlowTheme.of(context).headlineSmall.override(
                   fontFamily: FlutterFlowTheme.of(context).headlineSmallFamily,
@@ -105,7 +105,7 @@ class _SearchMembersWidgetState extends State<SearchMembersWidget> {
                         obscureText: false,
                         decoration: InputDecoration(
                           labelText: FFLocalizations.of(context).getText(
-                            'bn37syph' /* Search members... */,
+                            'bn37syph' /* Buscar miembros.. */,
                           ),
                           labelStyle: FlutterFlowTheme.of(context)
                               .labelMedium
@@ -218,7 +218,7 @@ class _SearchMembersWidgetState extends State<SearchMembersWidget> {
                         const EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 0.0, 0.0),
                     child: Text(
                       FFLocalizations.of(context).getText(
-                        'ux02ixql' /* Search Memebers */,
+                        'ux02ixql' /* Buscar miembros */,
                       ),
                       style: FlutterFlowTheme.of(context).bodySmall.override(
                             fontFamily:
@@ -401,7 +401,7 @@ class _SearchMembersWidgetState extends State<SearchMembersWidget> {
                                         },
                                         text:
                                             FFLocalizations.of(context).getText(
-                                          'kmiq19hs' /* Assign */,
+                                          'kmiq19hs' /* Assignar */,
                                         ),
                                         options: FFButtonOptions(
                                           width: 80.0,

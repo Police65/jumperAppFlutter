@@ -405,7 +405,7 @@ class _MainTrackerWidgetState extends State<MainTrackerWidget>
                                     0.0, 4.0, 0.0, 0.0),
                                 child: Text(
                                   FFLocalizations.of(context).getText(
-                                    '12tkp77z' /* Good morning */,
+                                    '12tkp77z' /* Buena jornada */,
                                   ),
                                   style: FlutterFlowTheme.of(context)
                                       .labelMedium
@@ -540,22 +540,22 @@ class _MainTrackerWidgetState extends State<MainTrackerWidget>
                                 tabs: [
                                   Tab(
                                     text: FFLocalizations.of(context).getText(
-                                      'qivbgraj' /* My Tasks */,
+                                      'qivbgraj' /* Mis tareas */,
                                     ),
                                   ),
                                   Tab(
                                     text: FFLocalizations.of(context).getText(
-                                      'iofpx15n' /* Not Started */,
+                                      'iofpx15n' /* No iniciado */,
                                     ),
                                   ),
                                   Tab(
                                     text: FFLocalizations.of(context).getText(
-                                      'wm00imuu' /* In Progress */,
+                                      'wm00imuu' /* En progreso */,
                                     ),
                                   ),
                                   Tab(
                                     text: FFLocalizations.of(context).getText(
-                                      'lqbva4ak' /* Complete */,
+                                      'lqbva4ak' /* Completo */,
                                     ),
                                   ),
                                 ],
@@ -1236,7 +1236,7 @@ class _MainTrackerWidgetState extends State<MainTrackerWidget>
                                                                     FFLocalizations.of(
                                                                             context)
                                                                         .getText(
-                                                                      '832adtr2' /* Start */,
+                                                                      '832adtr2' /* Iniciar */,
                                                                     ),
                                                                     style: FlutterFlowTheme.of(
                                                                             context)
@@ -1993,7 +1993,7 @@ class _MainTrackerWidgetState extends State<MainTrackerWidget>
                                                                           Text(
                                                                         FFLocalizations.of(context)
                                                                             .getText(
-                                                                          'hkcnmvtg' /* Complete */,
+                                                                          'hkcnmvtg' /* Completo */,
                                                                         ),
                                                                         style: FlutterFlowTheme.of(context)
                                                                             .bodyMedium
